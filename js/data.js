@@ -5,13 +5,19 @@ var data = {
   editing: null,
   tempTitle: '',
   search: [],
-  review: [],
-  id: '',
-  title: '',
-  year: '',
-  genre: '',
-  runtime: '',
-  actors: '',
-  images: [],
-  poster: ''
+  review: []
 };
+
+var previousDataJSON = localStorage.getItem('Search-Data');
+if (previousDataJSON !== null) {
+  var previousData = JSON.parse(previousDataJSON);
+  data = previousData;
+  data.tempTitle = '';
+}
+
+function beforeCall(event) {
+  var dataJSON = JSON.stringify(data);
+  localStorage.setItem('Search-Data', dataJSON);
+}
+
+window.addEventListener('beforeunload', beforeCall);

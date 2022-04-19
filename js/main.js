@@ -3,16 +3,23 @@ var userTitle = document.querySelector('.user-title');
 var form = document.querySelector('form');
 var resultUL = document.querySelector('.result-box');
 var views = document.querySelectorAll('.view');
+var home = document.querySelector('.home');
+
+home.addEventListener('click', function () {
+  viewSwitch('search-form');
+});
 
 function saveInfo(event) {
   event.preventDefault();
   data.tempTitle = userTitle.value;
+  viewSwitch('search-result');
 }
 
 form.addEventListener('submit', saveInfo);
 
 function createSearch(result) {
   var list = document.createElement('li');
+  list.className = 'searchListItem';
   var row = document.createElement('div');
   row.className = 'row';
   list.appendChild(row);
@@ -37,6 +44,7 @@ function createSearch(result) {
 }
 
 function domLoad(event) {
+  searchRequest(data.tempTitle);
   for (var i = 0; i < data.search.length; i++) {
     resultUL.append(createSearch(data.search[i]));
   }
@@ -54,4 +62,19 @@ function viewSwitch(view) {
     }
   }
   data.view = view;
+}
+
+function searchRequest(title) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://imdb-api.com/en/API/SearchMovie/k_u0o3hbaw/' + title);
+  xhr.responseType = 'json';
+  xhr.send();
+  xhr.addEventListener('load', function () {
+    for (var i = 0; i < xhr.response.results.length; i++) {
+      var newobj = {};
+      newobj.title = xhr.response.results[i].title;
+      newobj.poster = xhr.response.results[i].image;
+      data.search.push(newobj);
+    }
+  });
 }

@@ -51,10 +51,13 @@ ul {
 .nav-bar {
   margin: 30px;
   border-bottom: 1px solid rgb(255, 200, 90);
+  display: flex;
+  justify-content: space-between;
 }
 
 .home {
   font-size: 26px;
+  display: inline;
 }
 
 .lab {
@@ -102,4 +105,9 @@ ul {
 
 .hidden {
   display: none;
+}
+
+.reviews {
+  align-items: flex-end;
+  display: flex;
 }
