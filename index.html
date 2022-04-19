@@ -20,19 +20,45 @@
     </div>
   </div>
   <div class="container">
-    <div class="row">
-      <div class="col-full">
-        <div data-view="search-form">
-          <div class="search-box center">
-            <div class="inside">
-              <div class="lab">
-                <label for="search">NAME</label>
+    <form>
+      <div class="row">
+        <div class="col-full">
+          <div data-view="search-form" class="view">
+            <div class="search-box center">
+              <div class="inside">
+                <div class="lab">
+                  <label for="search">NAME</label>
+                </div>
+                <div class="inline">
+                  <input class="user-title" type="text" id="search" required>
+                </div>
+                <button class="inline" type="submit">SEARCH</button>
               </div>
-              <div class="inline">
-                <input type="text" id="search" required>
-              </div>
-              <button class="inline" type="submit">SEARCH</button>
             </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="container">
+    <div data-view="search-result" class="view">
+      <div class="row">
+        <div class="col-full">
+          <div class="search-contain center">
+            <ul class="result-box">
+              <li>
+                <div class="row">
+                  <div class="col-full">
+                    <div class="a-search">
+                      <img class="search-image" src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.6800_AL_.jpg">
+                      <div class="center">
+                        <p class="search-title">This is a title of a search</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -6,6 +6,10 @@ input {
   width: 320px;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .container {
   width: 100%;
 }
@@ -63,4 +67,39 @@ input {
 
 .inside {
   width: 400px;
+}
+
+.search-contain {
+  min-height: 400px;
+  width: 900px;
+  margin: 100px auto;
+  background-color: black;
+  color: white;
+}
+
+.a-search {
+  background-color: gray;
+  width: 600px;
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid white;
+  margin: 20px 0;
+}
+
+.search-title {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 22px;
+}
+
+.search-image {
+  display: inline;
+  max-width: 150px;
+  max-height: 300px;
+  justify-content: flex-start;
+  border-radius: 5px 0 0 5px;
+}
+
+.hidden {
+  display: none;
 }
