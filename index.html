@@ -9,11 +9,35 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <header>
-  </header>
-  <main>
-  </main>
+<body class="orange">
+  <div class="container black">
+    <div class="row">
+      <div class="col-full">
+        <div class="nav-bar">
+          <a class="home">MOVIE REGISTRY</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-full">
+        <div data-view="search-form">
+          <div class="search-box center">
+            <div class="inside">
+              <div class="lab">
+                <label for="search">NAME</label>
+              </div>
+              <div class="inline">
+                <input type="text" id="search" required>
+              </div>
+              <button class="inline" type="submit">SEARCH</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>

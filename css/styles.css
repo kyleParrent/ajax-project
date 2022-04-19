@@ -1,0 +1,66 @@
+* {
+  font-family: Anton, sans-serif;
+}
+
+input {
+  width: 320px;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.col-half {
+  flex-basis: 50%;
+}
+
+.search-box {
+  width: 600px;
+  height: 200px;
+  margin: 150px auto;
+  background-color: black;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
+
+.orange {
+  background-color: rgb(255, 200, 90);
+}
+
+.nav-bar {
+  margin: 30px;
+  border-bottom: 1px solid rgb(255, 200, 90);
+}
+
+.home {
+  font-size: 26px;
+}
+
+.lab {
+  color: white;
+}
+
+.inline {
+  display: inline;
+}
+
+.inside {
+  width: 400px;
+}
