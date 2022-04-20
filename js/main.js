@@ -21,7 +21,7 @@ function saveInfo(event) {
 
 form.addEventListener('submit', saveInfo);
 
-function createSearch(result) {
+function generateSearchResult(result) {
   var list = document.createElement('li');
   list.className = 'search-list-item';
   var row = document.createElement('div');
@@ -48,11 +48,8 @@ function createSearch(result) {
 }
 
 function domLoad(event) {
-  while (resultUL.firstElementChild) {
-    resultUL.firstElementChild.remove();
-  }
   for (var i = 0; i < data.search.length; i++) {
-    resultUL.append(createSearch(data.search[i]));
+    resultUL.append(generateSearchResult(data.search[i]));
   }
   viewSwitch(data.view);
 }
@@ -83,7 +80,7 @@ function searchRequest(title) {
       newobj.poster = xhr.response.results[i].image;
       newobj.id = xhr.response.results[i].id;
       data.search.push(newobj);
-      resultUL.append(createSearch(data.search[i]));
+      resultUL.append(generateSearchResult(data.search[i]));
     }
   }
   );
