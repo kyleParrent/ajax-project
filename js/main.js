@@ -23,7 +23,7 @@ form.addEventListener('submit', saveInfo);
 
 function createSearch(result) {
   var list = document.createElement('li');
-  list.className = 'searchListItem';
+  list.className = 'search-list-item';
   var row = document.createElement('div');
   row.className = 'row';
   list.appendChild(row);
