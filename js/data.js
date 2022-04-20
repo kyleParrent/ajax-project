@@ -12,7 +12,6 @@ var previousDataJSON = localStorage.getItem('Search-Data');
 if (previousDataJSON !== null) {
   var previousData = JSON.parse(previousDataJSON);
   data = previousData;
-  data.tempTitle = '';
 }
 
 function beforeCall(event) {

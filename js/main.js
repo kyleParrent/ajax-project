@@ -11,7 +11,11 @@ home.addEventListener('click', function () {
 
 function saveInfo(event) {
   event.preventDefault();
+  while (resultUL.firstElementChild) {
+    resultUL.firstElementChild.remove();
+  }
   data.tempTitle = userTitle.value;
+  searchRequest(data.tempTitle);
   viewSwitch('search-result');
 }
 
@@ -44,7 +48,9 @@ function createSearch(result) {
 }
 
 function domLoad(event) {
-  searchRequest(data.tempTitle);
+  while (resultUL.firstElementChild) {
+    resultUL.firstElementChild.remove();
+  }
   for (var i = 0; i < data.search.length; i++) {
     resultUL.append(createSearch(data.search[i]));
   }
@@ -65,6 +71,7 @@ function viewSwitch(view) {
 }
 
 function searchRequest(title) {
+  data.search = [];
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://imdb-api.com/en/API/SearchMovie/k_u0o3hbaw/' + title);
   xhr.responseType = 'json';
@@ -74,7 +81,10 @@ function searchRequest(title) {
       var newobj = {};
       newobj.title = xhr.response.results[i].title;
       newobj.poster = xhr.response.results[i].image;
+      newobj.id = xhr.response.results[i].id;
       data.search.push(newobj);
+      resultUL.append(createSearch(data.search[i]));
     }
-  });
+  }
+  );
 }
