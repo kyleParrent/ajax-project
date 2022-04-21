@@ -4,6 +4,12 @@ var form = document.querySelector('form');
 var resultUL = document.querySelector('.result-box');
 var views = document.querySelectorAll('.view');
 var home = document.querySelector('.home');
+var movieTitle = document.querySelector('.movie-title');
+var posterPic = document.querySelector('.poster-pic');
+var genre = document.querySelector('.genre');
+var runtime = document.querySelector('.runtime');
+var actors = document.querySelector('.actors');
+var searchContain = document.querySelector('.search-contain');
 
 home.addEventListener('click', function () {
   viewSwitch('search-form');
@@ -85,3 +91,37 @@ function searchRequest(title) {
   }
   );
 }
+
+var infoData = {};
+function searchInfoRequest(id) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://imdb-api.com/en/API/Title/k_u0o3hbaw/' + id + '/Images,');
+  xhr.responseType = 'json';
+  xhr.send();
+  xhr.addEventListener('load', function () {
+    // set a new object and give it all the info i need, it will be overwritten everytime a new movie is searched
+    infoData.title = xhr.response.title;
+    infoData.poster = xhr.response.image;
+    infoData.genre = xhr.response.genres;
+    infoData.runtime = xhr.response.runtimeStr;
+    infoData.actors = xhr.response.stars;
+    movieTitle.textContent = xhr.response.title;
+    posterPic.setAttribute('src', xhr.response.image);
+    genre.textContent = xhr.response.genres;
+    runtime.textContent = xhr.response.runtimeStr;
+    actors.textContent = xhr.response.stars;
+  }
+  );
+}
+
+function searchInfo(event) {
+  var searchItem = document.querySelectorAll('.a-search');
+  for (var i = 0; i < searchItem.length; i++) {
+    if (event.target === searchItem[i]) {
+      searchInfoRequest(data.search[i].id);
+      viewSwitch('info');
+    }
+  }
+}
+
+searchContain.addEventListener('click', searchInfo);

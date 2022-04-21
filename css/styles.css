@@ -86,7 +86,7 @@ ul {
   width: 600px;
   display: flex;
   border-radius: 5px;
-  border: 2px solid white;
+  border: 2px solid rgb(182, 182, 182);
   margin: 20px 0;
 }
 
@@ -94,6 +94,7 @@ ul {
   margin-left: 20px;
   margin-right: 20px;
   font-size: 22px;
+  text-decoration: underline;
 }
 
 .search-image {
@@ -103,6 +104,7 @@ ul {
   object-fit: contain;
   justify-content: flex-start;
   border-radius: 5px 0 0 5px;
+  background-color: rgb(182, 182, 182);
 }
 
 .hidden {
@@ -112,6 +114,7 @@ ul {
 .reviews {
   align-items: flex-end;
   display: flex;
+  margin-bottom: 3px;
 }
 
 .select {
@@ -120,7 +123,45 @@ ul {
   font-size: 26px;
 }
 
-@media screen and (max-width: 768px) {
+.info-box {
+  background-color: black;
+  color: white;
+  width: 75%;
+  margin: 100px 0 200px;
+}
+
+.info-pic {
+  margin: 50px 0 50px 50px;
+}
+
+.movie-title {
+  margin: 50px 0 100px 50px;
+  max-width: 400px;
+}
+
+.section {
+  margin: 0 0 50px 50px;
+  max-width: 300px;
+}
+
+.section-head {
+  margin: 0 0 50px 50px;
+  max-width: 300px;
+}
+
+.section-box {
+  display: flex;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.poster-pic {
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 900px) {
   .search-contain {
     width: 90%;
   }
@@ -131,5 +172,61 @@ ul {
 
   .search-image {
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 1430px) {
+  .info-box {
+    width: 50%;
+    margin-right: 50px;
+  }
+
+  .poster-pic {
+    max-width: 90%;
+    margin-right: 50px;
+  }
+
+  .section {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .info-box {
+    width: 70%;
+  }
+
+  .info-pic {
+    margin-left: 40px;
+  }
+
+  .movie-title {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info-box {
+    width: 85%;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section {
+    margin-left: 10px;
+  }
+
+  .section-head {
+    margin-left: 20px;
+  }
+
+  .info-pic {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .movie-title {
+    margin: 20px 10px 40px 20px;
   }
 }
