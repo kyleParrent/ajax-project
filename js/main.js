@@ -11,6 +11,7 @@ var runtime = document.querySelector('.runtime');
 var actors = document.querySelector('.actors');
 var searchContain = document.querySelector('.search-contain');
 var infoData = {};
+var reviewButton = document.querySelector('.review-button');
 
 home.addEventListener('click', function () {
   viewSwitch('search-form');
@@ -125,3 +126,7 @@ function searchInfo(event) {
 }
 
 searchContain.addEventListener('click', searchInfo);
+
+reviewButton.addEventListener('click', function () {
+  viewSwitch('review-form');
+});

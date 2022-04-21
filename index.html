@@ -33,7 +33,7 @@
                 <div class="inline">
                   <input class="user-title" type="text" id="search" required>
                 </div>
-                <button class="inline sButton" type="submit">SEARCH</button>
+                <button class="inline s-button" type="submit">SEARCH</button>
               </div>
             </div>
           </div>
@@ -60,22 +60,31 @@
         <div class="col-full center">
           <div class="info-box">
             <div class="row">
-              <div class="info-pic">
-                <img class="poster-pic" src="" alt="image">
+              <div class="col-half">
+                <div class="info-pic">
+                  <img class="poster-pic" src="" alt="image">
+                </div>
               </div>
-              <div class="info-data">
-                <h1 class="movie-title">Title</h1>
-                <div class="section-box">
-                  <p class="section-head">Genre:</p>
-                  <p class="genre section"></p>
+              <div class="col-half">
+                <div class="info-data">
+                  <div class="center">
+                    <h1 class="movie-title"></h1>
+                  </div>
+                  <div class="section-box">
+                    <p class="section-head">Genre:</p>
+                    <p class="genre section"></p>
+                  </div>
+                  <div class="section-box">
+                    <p class="section-head">Runtime:</p>
+                    <p class="runtime section"></p>
+                  </div>
+                  <div class="section-box">
+                    <p class="section-head">Lead Actors:</p>
+                    <p class="actors section"></p>
+                  </div>
                 </div>
-                <div class="section-box">
-                  <p class="section-head">Runtime:</p>
-                  <p class="runtime section"></p>
-                </div>
-                <div class="section-box">
-                  <p class="section-head">Lead Actors:</p>
-                  <p class="actors section"></p>
+                <div class="review-button-box">
+                  <button type="submit" class="review-button">REVIEW</button>
                 </div>
               </div>
             </div>
@@ -83,6 +92,54 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="container">
+    <form class="review-form">
+      <div class="row">
+        <div class="col-full">
+          <div data-view="review-form" class="view">
+            <div class="review-box">
+              <div class="lab center pad-top">
+                <label for="select-rate">RATING</label>
+              </div>
+              <div class="center">
+                <select name="rate" id="select-rate">
+                  <option value="">-- Number / 10 --</option>
+                  <option value="1">1</option>
+                  <option value="1.5">1.5</option>
+                  <option value="2">2</option>
+                  <option value="2.5">2.5</option>
+                  <option value="3">3</option>
+                  <option value="3.5">3.5</option>
+                  <option value="4">4</option>
+                  <option value="4.5">4.5</option>
+                  <option value="5">5</option>
+                  <option value="5.5">5.5</option>
+                  <option value="6">6</option>
+                  <option value="6.5">6.5</option>
+                  <option value="7">7</option>
+                  <option value="7.5">7.5</option>
+                  <option value="8">8</option>
+                  <option value="8.5">8.5</option>
+                  <option value="9">9</option>
+                  <option value="9.5">9.5</option>
+                  <option value="10">10!</option>
+                </select>
+              </div>
+              <div class="lab center pad-top">
+                <label for="rev">REVIEW</label>
+              </div>
+              <div class="center">
+                <textarea class="user-review" id="rev" rows="15" cols="120" required></textarea>
+              </div>
+              <div class="submit-button-box pad-top">
+                <button class="submit-button" type="submit">SUBMIT</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
