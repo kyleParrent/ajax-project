@@ -178,7 +178,7 @@ ul {
 .review-box {
   background-color: black;
   color: white;
-  width: 400px;
+  width: 1000px;
   height: 400px;
   margin: 150px auto;
 }
@@ -239,6 +239,14 @@ ul {
 
   .movie-title {
     margin-right: 20px;
+  }
+
+  .review-box {
+    width: 80%;
+  }
+
+  .user-review {
+    width: 80%;
   }
 }
 
