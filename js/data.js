@@ -3,6 +3,7 @@
 var data = {
   view: 'search-form',
   editing: null,
+  nextId: 1,
   tempTitle: '',
   search: [],
   review: []

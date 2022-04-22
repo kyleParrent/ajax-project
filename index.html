@@ -97,13 +97,13 @@
     <form class="review-form">
       <div class="row">
         <div class="col-full">
-          <div data-view="review-form" class="view">
+          <div data-view="user-review-page" class="view">
             <div class="review-box">
               <div class="lab center pad-top">
                 <label for="select-rate">RATING</label>
               </div>
               <div class="center">
-                <select name="rate" id="select-rate">
+                <select class="user-rating" name="rate" id="select-rate">
                   <option value="">-- Number / 10 --</option>
                   <option value="1">1</option>
                   <option value="1.5">1.5</option>
@@ -133,13 +133,34 @@
                 <textarea class="user-review" id="rev" rows="15" cols="120" required></textarea>
               </div>
               <div class="submit-button-box pad-top">
-                <button class="submit-button" type="submit">SUBMIT</button>
+                <button class="save-button" type="submit">SAVE</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </form>
+  </div>
+  <div class="container">
+    <div data-view="reviews" class="view">
+      <div class="row">
+        <div class="col-full center">
+          <div class="review-header">
+            <h2>REVIEWS</h2>
+            <button class="new-search">NEW SEARCH</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-full">
+          <ul class="pad-none review-ul">
+            <li class="center">
+              <h1 class="nothing">No Reviews Created</h1>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
