@@ -153,15 +153,38 @@ reviewButton.addEventListener('click', function () {
 
 function saveReview(event) {
   event.preventDefault();
-  infoData.review = userReview.value;
-  infoData.rating = userRating.value;
-  infoData.id = data.nextId;
-  data.nextId++;
-  data.review.push(infoData);
-  reviewUL.prepend(generateReview(infoData));
-  nothingHead.className = 'hidden';
-  reviewForm.reset();
-  viewSwitch('reviews');
+  var liList = document.querySelectorAll('li');
+  if (data.editing !== null) {
+    for (var i = 0; i < data.review.length; i++) {
+      if (data.editing.id === data.review[i].id) {
+        data.review[i].rating = userRating.value;
+        data.review[i].review = userReview.value;
+        data.editing = null;
+        var editedReview = data.review[i];
+        break;
+      }
+    }
+    var newReview = generateReview(editedReview);
+    for (var y = 0; y < liList.length; y++) {
+      var listID = liList[y].getAttribute('data-entry-id');
+      var newlistID = parseInt(listID);
+      if (newlistID === editedReview.id) {
+        liList[y].replaceWith(newReview);
+        reviewForm.reset();
+        viewSwitch('reviews');
+      }
+    }
+  } else {
+    infoData.review = userReview.value;
+    infoData.rating = userRating.value;
+    infoData.id = data.nextId;
+    data.nextId++;
+    data.review.push(infoData);
+    reviewUL.prepend(generateReview(infoData));
+    nothingHead.className = 'hidden';
+    reviewForm.reset();
+    viewSwitch('reviews');
+  }
 }
 
 reviewForm.addEventListener('submit', saveReview);
@@ -176,6 +199,15 @@ function generateReview(dataObj) {
   var row = document.createElement('div');
   row.className = 'row';
   revBox.appendChild(row);
+  var colFull2 = document.createElement('div');
+  colFull2.className = 'col-full';
+  row.appendChild(colFull2);
+  var iconBox = document.createElement('div');
+  iconBox.className = 'icon-box';
+  colFull2.appendChild(iconBox);
+  var icon = document.createElement('i');
+  icon.className = 'fas fa-edit icon';
+  iconBox.appendChild(icon);
   var col = document.createElement('div');
   col.className = 'col-half';
   row.appendChild(col);
@@ -256,4 +288,20 @@ newSearch.addEventListener('click', function () {
 
 navReviews.addEventListener('click', function () {
   viewSwitch('reviews');
+});
+
+reviewUL.addEventListener('click', function (event) {
+  if (event.target.matches('.icon')) {
+    viewSwitch('user-review-page');
+    var parentLi = event.target.closest('li');
+    var parentIdJSON = parentLi.getAttribute('data-entry-id');
+    var parentId = parseInt(parentIdJSON);
+    for (var i = 0; i < data.review.length; i++) {
+      if (data.review[i].id === parentId) {
+        data.editing = data.review[i];
+        userReview.value = data.editing.review;
+        userRating.value = data.editing.rating;
+      }
+    }
+  }
 });
