@@ -103,7 +103,7 @@
                 <label for="select-rate">RATING</label>
               </div>
               <div class="center">
-                <select name="rate" id="select-rate">
+                <select class="user-rating" name="rate" id="select-rate">
                   <option value="">-- Number / 10 --</option>
                   <option value="1">1</option>
                   <option value="1.5">1.5</option>
@@ -133,13 +133,75 @@
                 <textarea class="user-review" id="rev" rows="15" cols="120" required></textarea>
               </div>
               <div class="submit-button-box pad-top">
-                <button class="submit-button" type="submit">SUBMIT</button>
+                <button class="save-button" type="submit">SAVE</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </form>
+  </div>
+  <div class="container">
+    <div data-view="reviews" class="view">
+      <div class="row">
+        <div class="col-full center">
+          <div class="review-header">
+            <h2>REVIEWS</h2>
+            <button class="new-search">NEW SEARCH</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-full">
+          <ul class="pad-none review-ul">
+            <li>
+              <div class="review-list-box">
+                <div class="row">
+                  <div class="col-half">
+                    <img class="images-pic" src="https://imdb-api.com/images/original/MV5BMjIxNDU2Njk0OV5BMl5BanBnXkFtZTgwODc3Njc3NjE@._V1_Ratio0.7273_AL_.jpg">
+                  </div>
+                  <div class="col-half">
+                    <div class="center">
+                      <h1 class="movie-title">The Iron Giant</h1>
+                    </div>
+                    <div class="center">
+                      <h1 class="the-rating">7.5</h1>
+                    </div>
+                    <div class="section-box">
+                      <p class="section-head">Genre:</p>
+                      <p class="genre section">words words words</p>
+                    </div>
+                    <div class="section-box">
+                      <p class="section-head">Runtime:</p>
+                      <p class="runtime section">words words words</p>
+                    </div>
+                    <div class="section-box">
+                      <p class="section-head">Lead Actors:</p>
+                      <p class="actors section">words words words</p>
+                    </div>
+                  </div>
+                  <div class="col-full">
+                    <p class="the-review">Meet the most amazing way to highlight differences in your text! It is undoubtedly an easy
+                      to use online tool to compare
+                      text in the most efficient manner. It allows every user a hassle free experience to compare some content
+                      online. This
+                      incredible tool allows everyone to simply make an online text comparison and find out the differences amidst
+                      two texts.
+                      The super easy procedure involves just a single step; paste the two texts in separate boxes and click on the
+                      compare
+                      button to unfold the differences. The two texts will be shown on the screen side by side along with the
+                      differences
+                      highlighted. This awesome tool not only highlights the words within the cluster of lines that entail a
+                      difference. If
+                      your text is lengthy, it also offers links that will help you to jump from on difference to the other.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>

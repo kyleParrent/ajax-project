@@ -148,12 +148,12 @@ ul {
 .section-head {
   margin: 0 0 50px 50px;
   max-width: 300px;
+  text-decoration: underline;
 }
 
 .section-box {
   display: flex;
   font-weight: bold;
-  text-decoration: underline;
 }
 
 .poster-pic {
@@ -187,7 +187,7 @@ ul {
   padding-top: 20px;
 }
 
-.submit-button {
+.save-button {
   background-color: darkgray;
   font-weight: bold;
 }
@@ -203,7 +203,65 @@ ul {
   margin-right: 70px;
 }
 
+.review-list-box {
+  background-color: black;
+  color: white;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.images-pic {
+  margin: 50px 0 50px 50px;
+}
+
+.the-rating {
+  margin-bottom: 100px;
+  margin-top: 0;
+  font-size: 60px;
+}
+
+.the-review {
+  margin: 0 50px 50px;
+}
+
+.pad-none {
+  padding: 0;
+}
+
+.review-header {
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+}
+
+.new-search {
+  background-color: darkgray;
+  font-weight: bold;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.bad-movie {
+  color: rgb(255, 113, 113);
+}
+
+.good-movie {
+  color: rgb(113, 255, 113);
+}
+
 @media screen and (max-width: 1490px) {
+  .review-header {
+    width: 50%;
+  }
+
+  .review-list-box {
+    width: 50%;
+  }
+
+  .images-pic {
+    width: 85%;
+  }
+
   .movie-title {
     margin-top: 10px;
   }
@@ -229,7 +287,37 @@ ul {
   }
 }
 
+@media screen and (max-width: 1250px) {
+  .review-header {
+    width: 60%;
+  }
+
+  .review-list-box {
+    width: 60%;
+  }
+
+  .the-rating {
+    margin-bottom: 50px;
+  }
+
+  .movie-title {
+    margin-bottom: 50px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
+  .review-header {
+    width: 70%;
+  }
+
+  .review-list-box {
+    width: 70%;
+  }
+
+  .images-pic {
+    width: 85%;
+  }
+
   .info-box {
     width: 70%;
   }
@@ -260,9 +348,25 @@ ul {
   .submit-button-box {
     margin-right: 50px;
   }
+
+  .review-list-box {
+    width: 90%;
+  }
+
+  .review-header {
+    width: 90%;
+  }
+
+  .images-pic {
+    margin: 40px;
+  }
 }
 
 @media screen and (max-width: 450px) {
+  .images-pic {
+    margin: 20px;
+  }
+
   .section {
     margin-left: 10px;
   }
