@@ -127,7 +127,7 @@ ul {
 .info-box {
   background-color: black;
   color: white;
-  width: 75%;
+  width: 1200px;
   margin: 100px 0 200px;
 }
 
@@ -212,6 +212,7 @@ ul {
 
 .images-pic {
   margin: 50px 0 50px 50px;
+  max-width: 500px;
 }
 
 .the-rating {
@@ -249,37 +250,44 @@ ul {
   color: rgb(113, 255, 113);
 }
 
+.reviewed-item {
+  margin-bottom: 50px;
+}
+
+.nothing {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1490px) {
   .review-header {
-    width: 50%;
+    width: 80%;
   }
 
   .review-list-box {
-    width: 50%;
+    width: 80%;
   }
 
   .images-pic {
     width: 85%;
+    margin-left: 0;
   }
 
-  .movie-title {
-    margin-top: 10px;
-  }
-
-  .col-half {
-    flex-basis: 100%;
+  .image-box {
+    display: flex;
+    justify-content: center;
   }
 
   .info-box {
-    width: 60%;
     margin-right: 50px;
+    width: 80%;
   }
 
   .info-pic {
-    max-width: 100%;
-    margin-right: 50px;
-    display: flex;
-    justify-content: center;
+    width: 85%;
+  }
+
+  .poster-pic {
+    width: 85%;
   }
 
   .section {
@@ -288,6 +296,10 @@ ul {
 }
 
 @media screen and (max-width: 1250px) {
+  .col-half {
+    flex-basis: 100%;
+  }
+
   .review-header {
     width: 60%;
   }
@@ -302,6 +314,16 @@ ul {
 
   .movie-title {
     margin-bottom: 50px;
+    margin-top: 10px;
+  }
+
+  .info-pic {
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-box {
+    width: 60%;
   }
 }
 
@@ -316,19 +338,11 @@ ul {
 
   .images-pic {
     width: 85%;
+    margin-left: 0;
   }
 
   .info-box {
     width: 70%;
-  }
-
-  .poster-pic {
-    width: 100%;
-  }
-
-  .info-pic {
-    margin-left: 40px;
-    margin-right: 40px;
   }
 
   .movie-title {
@@ -357,16 +371,18 @@ ul {
     width: 90%;
   }
 
-  .images-pic {
-    margin: 40px;
+  .info-box {
+    margin-right: 0;
+    width: 90%;
+  }
+
+  .info-pic {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .images-pic {
-    margin: 20px;
-  }
-
   .section {
     margin-left: 10px;
   }
@@ -376,13 +392,7 @@ ul {
   }
 
   .info-pic {
-    margin-left: 20px;
     margin-bottom: 10px;
-    margin-right: 20px;
-  }
-
-  .info-box {
-    margin-left: 50px;
   }
 
   .movie-title {
@@ -390,8 +400,6 @@ ul {
   }
 
   .poster-pic {
-    flex-basis: 100%;
-    width: 100%;
     margin: 0;
   }
 
