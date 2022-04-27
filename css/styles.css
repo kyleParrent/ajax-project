@@ -10,6 +10,12 @@ ul {
   list-style-type: none;
 }
 
+button,
+i,
+a {
+  cursor: pointer;
+}
+
 .container {
   width: 100%;
 }
@@ -28,7 +34,7 @@ ul {
 }
 
 .search-box {
-  width: 600px;
+  max-width: 600px;
   height: 200px;
   margin: 150px auto;
   background-color: black;
