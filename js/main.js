@@ -4,7 +4,7 @@ var form = document.querySelector('form');
 var resultUL = document.querySelector('.result-box');
 var views = document.querySelectorAll('.view');
 var home = document.querySelector('.home');
-var movieTitle = document.querySelector('.movie-title');
+var movieTitle = document.querySelector('.info-title');
 var posterPic = document.querySelector('.poster-pic');
 var genre = document.querySelector('.genre');
 var runtime = document.querySelector('.runtime');
@@ -44,7 +44,7 @@ function generateSearchResult(result) {
   row.className = 'row';
   list.appendChild(row);
   var col = document.createElement('div');
-  col.className = 'col-full';
+  col.className = 'col-full center';
   row.appendChild(col);
   var theSearch = document.createElement('div');
   theSearch.className = 'a-search';
@@ -273,7 +273,7 @@ function generateReview(dataObj) {
   userActor.textContent = dataObj.actors;
   secBox3.appendChild(userActor);
   var colFull = document.createElement('div');
-  colFull.className = 'col-full';
+  colFull.className = 'col-full review-para';
   row.appendChild(colFull);
   var userRev = document.createElement('p');
   userRev.className = 'the-review';

@@ -97,6 +97,7 @@ a {
 }
 
 .search-title {
+  max-width: 400px;
   margin-left: 20px;
   margin-right: 20px;
   font-size: 22px;
@@ -106,12 +107,17 @@ a {
 
 .search-image {
   display: inline;
-  max-width: 150px;
+  width: 150px;
   height: 200px;
   object-fit: contain;
   justify-content: flex-start;
   border-radius: 5px 0 0 5px;
   background-color: rgb(107, 107, 107);
+}
+
+.search-image-con {
+  width: 150px;
+  max-height: 200px;
 }
 
 .hidden {
@@ -138,11 +144,11 @@ a {
 }
 
 .info-pic {
-  margin: 50px 0 50px 50px;
+  margin: 50px 0;
 }
 
 .movie-title {
-  margin: 100px 0;
+  margin: 75px 0 0;
   max-width: 400px;
 }
 
@@ -181,12 +187,22 @@ a {
   font-weight: bold;
 }
 
+.user-review {
+  max-width: 650px;
+}
+
+.b-box {
+  width: 650px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .review-box {
   background-color: black;
   color: white;
-  width: 1000px;
+  width: 800px;
   height: 400px;
-  margin: 150px auto;
+  margin: 50px auto;
 }
 
 .pad-top {
@@ -203,12 +219,6 @@ a {
   font-weight: bold;
 }
 
-.submit-button-box {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 70px;
-}
-
 .review-list-box {
   background-color: black;
   color: white;
@@ -222,8 +232,8 @@ a {
 }
 
 .the-rating {
-  margin-bottom: 100px;
-  margin-top: 0;
+  margin-bottom: 75px;
+  margin-top: 75px;
   font-size: 60px;
 }
 
@@ -270,11 +280,23 @@ a {
 }
 
 .icon {
-  padding: 30px 30px 0 0;
+  padding: 20px 20px 0 0;
   font-size: 26px;
 }
 
+.result-box {
+  padding: 0;
+}
+
+.info-title {
+  margin: 75px;
+}
+
 @media screen and (max-width: 1490px) {
+  .info-box {
+    width: 80%;
+  }
+
   .review-header {
     width: 80%;
   }
@@ -293,11 +315,6 @@ a {
     justify-content: center;
   }
 
-  .info-box {
-    margin-right: 50px;
-    width: 80%;
-  }
-
   .info-pic {
     width: 85%;
   }
@@ -309,9 +326,35 @@ a {
   .section {
     margin-right: 30px;
   }
+
+  .user-review {
+    width: 80%;
+  }
+
+  .b-box {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 1250px) {
+  .info-title {
+    margin-top: 0;
+  }
+
+  .review-para {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section {
+    margin-left: 20px;
+  }
+
+  .section-box {
+    display: flex;
+    justify-content: center;
+  }
+
   .col-half {
     flex-basis: 100%;
   }
@@ -325,11 +368,10 @@ a {
   }
 
   .the-rating {
-    margin-bottom: 50px;
+    margin: 50px 0;
   }
 
   .movie-title {
-    margin-bottom: 50px;
     margin-top: 10px;
   }
 
@@ -337,19 +379,19 @@ a {
     display: flex;
     justify-content: center;
   }
-
-  .info-box {
-    width: 60%;
-  }
 }
 
 @media screen and (max-width: 1000px) {
-  .review-header {
-    width: 70%;
+  .a-search {
+    width: 90%;
   }
 
-  .review-list-box {
-    width: 70%;
+  .search-title {
+    width: 90%;
+  }
+
+  .search-contain {
+    width: 90%;
   }
 
   .images-pic {
@@ -357,26 +399,14 @@ a {
     margin-left: 0;
   }
 
-  .info-box {
-    width: 70%;
-  }
-
-  .movie-title {
-    margin-right: 20px;
-  }
-
   .review-box {
-    width: 80%;
-  }
-
-  .user-review {
     width: 80%;
   }
 }
 
 @media screen and (max-width: 740px) {
-  .submit-button-box {
-    margin-right: 50px;
+  .section-box {
+    justify-content: flex-start;
   }
 
   .review-list-box {
@@ -387,32 +417,49 @@ a {
     width: 90%;
   }
 
-  .info-box {
-    margin-right: 0;
-    width: 90%;
-  }
-
-  .info-pic {
-    width: 100%;
-    margin-left: 0;
+  .review-para {
+    justify-content: flex-start;
   }
 }
 
 @media screen and (max-width: 450px) {
+  .search-image {
+    width: 100px;
+  }
+
+  .search-contain {
+    width: 100%;
+  }
+
+  .info-title {
+    margin: 50px;
+    font-size: 28px;
+  }
+
+  .info-pic {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .movie-title {
+    font-size: 28px;
+    margin: 0 10px;
+  }
+
+  .search-title {
+    font-size: 16px;
+  }
+
+  .user-title {
+    width: 65%;
+  }
+
   .section {
     margin-left: 10px;
   }
 
   .section-head {
     margin-left: 20px;
-  }
-
-  .info-pic {
-    margin-bottom: 10px;
-  }
-
-  .movie-title {
-    margin: 20px 10px 40px 20px;
   }
 
   .poster-pic {
@@ -423,7 +470,7 @@ a {
     width: 100%;
   }
 
-  .submit-button-box {
-    margin-right: 40px;
+  .the-review {
+    margin-left: 20px;
   }
 }
