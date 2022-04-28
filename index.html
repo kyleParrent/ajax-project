@@ -29,14 +29,16 @@
         <div class="col-full">
           <div data-view="search-form" class="view">
             <div class="search-box center">
-              <div class="inside">
-                <div class="lab">
-                  <label for="search">NAME</label>
+              <div class="row">
+                <div class="col-full">
+                  <div class="lab">
+                    <label for="search">TITLE</label>
+                  </div>
+                  <div class="inline">
+                    <input class="user-title" type="text" id="search" required>
+                  </div>
+                  <button class="inline s-button" type="submit">SEARCH</button>
                 </div>
-                <div class="inline">
-                  <input class="user-title" type="text" id="search" required>
-                </div>
-                <button class="inline s-button" type="submit">SEARCH</button>
               </div>
             </div>
           </div>
@@ -45,6 +47,9 @@
     </form>
   </div>
   <div class="container">
+    <div class="load-box hidden">
+      <div class="lds-dual-ring"></div>
+    </div>
     <div data-view="search-result" class="view">
       <div class="row">
         <div class="col-full">
@@ -58,12 +63,15 @@
     </div>
   </div>
   <div class="container">
+    <div class="load-box hidden">
+      <div class="lds-dual-ring"></div>
+    </div>
     <div data-view="info" class="view">
       <div class="row">
         <div class="col-full center">
           <div class="info-box">
             <div class="row">
-              <div class="col-half">
+              <div class="col-half center">
                 <div class="info-pic">
                   <img class="poster-pic" src="" alt="image">
                 </div>
@@ -71,7 +79,7 @@
               <div class="col-half">
                 <div class="info-data">
                   <div class="center">
-                    <h1 class="movie-title"></h1>
+                    <h1 class="info-title"></h1>
                   </div>
                   <div class="section-box">
                     <p class="section-head">Genre:</p>
@@ -102,41 +110,47 @@
         <div class="col-full">
           <div data-view="user-review-page" class="view">
             <div class="review-box">
-              <div class="lab center pad-top">
-                <label for="select-rate">RATING</label>
-              </div>
-              <div class="center">
-                <select class="user-rating" name="rate" id="select-rate">
-                  <option value="">-- Number / 10 --</option>
-                  <option value="1">1</option>
-                  <option value="1.5">1.5</option>
-                  <option value="2">2</option>
-                  <option value="2.5">2.5</option>
-                  <option value="3">3</option>
-                  <option value="3.5">3.5</option>
-                  <option value="4">4</option>
-                  <option value="4.5">4.5</option>
-                  <option value="5">5</option>
-                  <option value="5.5">5.5</option>
-                  <option value="6">6</option>
-                  <option value="6.5">6.5</option>
-                  <option value="7">7</option>
-                  <option value="7.5">7.5</option>
-                  <option value="8">8</option>
-                  <option value="8.5">8.5</option>
-                  <option value="9">9</option>
-                  <option value="9.5">9.5</option>
-                  <option value="10">10!</option>
-                </select>
-              </div>
-              <div class="lab center pad-top">
-                <label for="rev">REVIEW</label>
-              </div>
-              <div class="center">
-                <textarea class="user-review" id="rev" rows="15" cols="120" required></textarea>
-              </div>
-              <div class="submit-button-box pad-top">
-                <button class="save-button" type="submit">SAVE</button>
+              <div class="row">
+                <div class="col-full">
+                  <div class="lab center pad-top">
+                    <label for="select-rate">RATING</label>
+                  </div>
+                  <div class="center">
+                    <select class="user-rating" name="rate" id="select-rate">
+                      <option value="">-- Number / 10 --</option>
+                      <option value="1">1</option>
+                      <option value="1.5">1.5</option>
+                      <option value="2">2</option>
+                      <option value="2.5">2.5</option>
+                      <option value="3">3</option>
+                      <option value="3.5">3.5</option>
+                      <option value="4">4</option>
+                      <option value="4.5">4.5</option>
+                      <option value="5">5</option>
+                      <option value="5.5">5.5</option>
+                      <option value="6">6</option>
+                      <option value="6.5">6.5</option>
+                      <option value="7">7</option>
+                      <option value="7.5">7.5</option>
+                      <option value="8">8</option>
+                      <option value="8.5">8.5</option>
+                      <option value="9">9</option>
+                      <option value="9.5">9.5</option>
+                      <option value="10">10!</option>
+                    </select>
+                  </div>
+                  <div class="lab center pad-top">
+                    <label for="rev">REVIEW</label>
+                  </div>
+                  <div class="center">
+                    <textarea class="user-review" id="rev" rows="15" cols="120" required></textarea>
+                  </div>
+                  <div class="submit-button-box pad-top center">
+                    <div class="b-box">
+                      <button class="save-button" type="submit">SAVE</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

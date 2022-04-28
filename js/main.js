@@ -4,7 +4,7 @@ var form = document.querySelector('form');
 var resultUL = document.querySelector('.result-box');
 var views = document.querySelectorAll('.view');
 var home = document.querySelector('.home');
-var movieTitle = document.querySelector('.movie-title');
+var movieTitle = document.querySelector('.info-title');
 var posterPic = document.querySelector('.poster-pic');
 var genre = document.querySelector('.genre');
 var runtime = document.querySelector('.runtime');
@@ -19,8 +19,11 @@ var userReview = document.querySelector('.user-review');
 var userRating = document.querySelector('.user-rating');
 var reviewUL = document.querySelector('.review-ul');
 var nothingHead = document.querySelector('.nothing');
+var loadIcon = document.querySelector('.load-box');
+var infoBox = document.querySelector('.info-box');
 
 home.addEventListener('click', function () {
+  loadIcon.className = 'load-box hidden';
   viewSwitch('search-form');
 });
 
@@ -44,7 +47,7 @@ function generateSearchResult(result) {
   row.className = 'row';
   list.appendChild(row);
   var col = document.createElement('div');
-  col.className = 'col-full';
+  col.className = 'col-full center';
   row.appendChild(col);
   var theSearch = document.createElement('div');
   theSearch.className = 'a-search';
@@ -97,6 +100,7 @@ function searchRequest(title) {
   xhr.open('GET', 'https://imdb-api.com/en/API/SearchMovie/k_4dqtsi6v/' + title);
   xhr.responseType = 'json';
   xhr.send();
+  loadIcon.className = 'load-box';
   xhr.addEventListener('load', function () {
     for (var i = 0; i < xhr.response.results.length; i++) {
       var newobj = {};
@@ -105,6 +109,7 @@ function searchRequest(title) {
       newobj.id = xhr.response.results[i].id;
       data.search.push(newobj);
       resultUL.append(generateSearchResult(data.search[i]));
+      loadIcon.className = 'load-box hidden';
     }
   }
   );
@@ -115,6 +120,8 @@ function searchInfoRequest(id) {
   xhr.open('GET', 'https://imdb-api.com/en/API/Title/k_4dqtsi6v/' + id + '/Images,');
   xhr.responseType = 'json';
   xhr.send();
+  loadIcon.className = 'load-box';
+  infoBox.className = 'info-box hidden';
   xhr.addEventListener('load', function () {
     infoData = {};
     infoData.title = xhr.response.title;
@@ -131,6 +138,8 @@ function searchInfoRequest(id) {
     genre.textContent = infoData.genre;
     runtime.textContent = infoData.runtime;
     actors.textContent = infoData.actors;
+    loadIcon.className = 'load-box hidden';
+    infoBox.className = 'info-box';
   }
   );
 }
@@ -273,7 +282,7 @@ function generateReview(dataObj) {
   userActor.textContent = dataObj.actors;
   secBox3.appendChild(userActor);
   var colFull = document.createElement('div');
-  colFull.className = 'col-full';
+  colFull.className = 'col-full review-para';
   row.appendChild(colFull);
   var userRev = document.createElement('p');
   userRev.className = 'the-review';
@@ -287,6 +296,7 @@ newSearch.addEventListener('click', function () {
 });
 
 navReviews.addEventListener('click', function () {
+  loadIcon.className = 'load-box hidden';
   viewSwitch('reviews');
 });
 
