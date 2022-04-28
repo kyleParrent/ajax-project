@@ -16,6 +16,10 @@ a {
   cursor: pointer;
 }
 
+label {
+  font-weight: bold;
+}
+
 .container {
   width: 100%;
 }
@@ -38,6 +42,7 @@ a {
   height: 200px;
   margin: 150px auto;
   background-color: black;
+  border-radius: 10px;
 }
 
 .center {
@@ -85,6 +90,7 @@ a {
   margin: 0 auto;
   background-color: black;
   color: white;
+  border-radius: 10px;
 }
 
 .a-search {
@@ -120,10 +126,6 @@ a {
   max-height: 200px;
 }
 
-.hidden {
-  display: none;
-}
-
 .reviews {
   align-items: flex-end;
   display: flex;
@@ -141,6 +143,7 @@ a {
   color: white;
   width: 1200px;
   margin: 100px 0 200px;
+  border-radius: 20px;
 }
 
 .info-pic {
@@ -203,6 +206,7 @@ a {
   width: 800px;
   height: 400px;
   margin: 50px auto;
+  border-radius: 10px;
 }
 
 .pad-top {
@@ -224,6 +228,7 @@ a {
   color: white;
   width: 1200px;
   margin: 0 auto;
+  border-radius: 20px;
 }
 
 .images-pic {
@@ -290,6 +295,47 @@ a {
 
 .info-title {
   margin: 75px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring::after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fed;
+  border-color: #fed transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.load-box {
+  position: fixed;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (max-width: 1490px) {
