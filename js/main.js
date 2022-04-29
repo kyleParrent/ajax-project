@@ -306,9 +306,9 @@ reviewUL.addEventListener('click', function (event) {
     var parentLi = event.target.closest('li');
     var parentIdJSON = parentLi.getAttribute('data-entry-id');
     var parentId = parseInt(parentIdJSON);
-    for (var i = 0; i < data.review.length; i++) {
-      if (data.review[i].id === parentId) {
-        data.editing = data.review[i];
+    for (var x = 0; x < data.review.length; x++) {
+      if (data.review[x].id === parentId) {
+        data.editing = data.review[x];
         userReview.value = data.editing.review;
         userRating.value = data.editing.rating;
       }
