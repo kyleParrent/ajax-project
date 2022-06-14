@@ -80,10 +80,6 @@ label {
   display: inline;
 }
 
-.inside {
-  width: 400px;
-}
-
 .search-contain {
   min-height: 400px;
   width: 900px;
@@ -119,11 +115,6 @@ label {
   justify-content: flex-start;
   border-radius: 5px 0 0 5px;
   background-color: rgb(107, 107, 107);
-}
-
-.search-image-con {
-  width: 150px;
-  max-height: 200px;
 }
 
 .reviews {
