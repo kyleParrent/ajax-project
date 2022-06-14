@@ -297,6 +297,10 @@ label {
   margin: 75px;
 }
 
+.search-list-item {
+  cursor: pointer;
+}
+
 .lds-dual-ring {
   display: inline-block;
   width: 80px;
