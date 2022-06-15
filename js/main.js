@@ -43,6 +43,7 @@ form.addEventListener('submit', saveInfo);
 function generateSearchResult(result) {
   var list = document.createElement('li');
   list.className = 'search-list-item';
+  list.setAttribute('data-id', result.id);
   var row = document.createElement('div');
   row.className = 'row';
   list.appendChild(row);
@@ -145,13 +146,11 @@ function searchInfoRequest(id) {
 }
 
 function searchInfo(event) {
-  var searchItem = document.querySelectorAll('.a-search');
-  for (var i = 0; i < searchItem.length; i++) {
-    if (event.target === searchItem[i]) {
-      searchInfoRequest(data.search[i].id);
-      viewSwitch('info');
-    }
-  }
+  const $aSearch = event.target.closest('.search-list-item');
+  if (!$aSearch) return;
+  const id = $aSearch.getAttribute('data-id');
+  searchInfoRequest(id);
+  viewSwitch('info');
 }
 
 searchContain.addEventListener('click', searchInfo);
@@ -202,9 +201,15 @@ function generateReview(dataObj) {
   var revLi = document.createElement('li');
   revLi.setAttribute('data-entry-id', dataObj.id);
   revLi.className = 'reviewed-item';
+  var newRow = document.createElement('div');
+  newRow.className = 'row';
+  revLi.appendChild(newRow);
+  var newCol = document.createElement('div');
+  newCol.className = 'col-full';
+  newRow.appendChild(newCol);
   var revBox = document.createElement('div');
   revBox.className = 'review-list-box';
-  revLi.appendChild(revBox);
+  newCol.appendChild(revBox);
   var row = document.createElement('div');
   row.className = 'row';
   revBox.appendChild(row);
