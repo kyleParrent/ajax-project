@@ -2,6 +2,32 @@ input {
   width: 320px;
 }
 
+.user-title {
+  width: 200px;
+}
+
+.info-data {
+  width: 70%;
+}
+
+.all-sections {
+  width: 70%;
+}
+
+.the-review {
+  padding-left: 30px;
+  padding-bottom: 50px;
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+}
+
+.images-pic {
+  width: 80%;
+}
+
 .container {
   width: 100%;
 }
@@ -22,6 +48,10 @@ input {
 .center {
   display: flex;
   justify-content: center;
+}
+
+.align-center {
+  display: flex;
   align-items: center;
 }
 
@@ -49,16 +79,12 @@ input {
 
 .info-pic {
   margin: 50px 0;
-}
-
-.movie-title {
-  margin: 75px 0 0;
-  max-width: 400px;
+  display: flex;
+  justify-content: center;
 }
 
 .section {
-  margin: 0 0 50px 50px;
-  max-width: 300px;
+  margin: 0 0 0 50px;
 }
 
 .review-button-box {
@@ -69,11 +95,11 @@ input {
 }
 
 .user-review {
-  max-width: 650px;
+  width: 90%;
 }
 
 .b-box {
-  width: 650px;
+  width: 90%;
   display: flex;
   justify-content: flex-end;
 }
@@ -82,22 +108,14 @@ input {
   padding-top: 20px;
 }
 
-.images-pic {
-  margin: 20px 0 50px 50px;
-  max-width: 500px;
-}
-
-.the-review {
-  margin: 0 50px 50px;
-}
-
 .pad-none {
   padding: 0;
 }
 
 .review-header {
   display: flex;
-  width: 1200px;
+  width: 100%;
+  padding: 0 30px;
   justify-content: space-between;
 }
 
@@ -108,6 +126,7 @@ input {
 .icon-box {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 30px;
 }
 
 .result-box {
@@ -115,202 +134,45 @@ input {
 }
 
 .info-title {
-  margin: 75px;
+  margin: 0 0 50px;
 }
 
-@media screen and (max-width: 1490px) {
+@media screen and (min-width: 500px) {
+  .user-title {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 700px) {
   .info-box {
-    width: 80%;
-  }
-
-  .review-header {
-    width: 80%;
-  }
-
-  .review-list-box {
-    width: 80%;
-  }
-
-  .images-pic {
-    width: 85%;
-    margin-left: 0;
-  }
-
-  .image-box {
-    display: flex;
-    justify-content: center;
-  }
-
-  .info-pic {
-    width: 85%;
-  }
-
-  .poster-pic {
-    width: 85%;
-  }
-
-  .section {
-    margin-right: 30px;
-  }
-
-  .user-review {
-    width: 80%;
-  }
-
-  .b-box {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 1250px) {
-  .info-title {
-    margin-top: 0;
-  }
-
-  .review-para {
-    display: flex;
-    justify-content: center;
-  }
-
-  .section {
-    margin-left: 20px;
-  }
-
-  .section-box {
-    display: flex;
-    justify-content: center;
-  }
-
-  .col-half {
-    flex-basis: 100%;
-  }
-
-  .review-header {
     width: 60%;
   }
 
-  .review-list-box {
-    width: 60%;
+  .search-contain {
+    width: 70%;
   }
 
-  .the-rating {
-    margin: 50px 0;
-  }
-
-  .movie-title {
-    margin-top: 10px;
-  }
-
-  .info-pic {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 1000px) {
   .a-search {
     width: 90%;
   }
+}
 
-  .search-title {
-    width: 90%;
-  }
-
+@media screen and (min-width: 1200px) {
   .search-contain {
-    width: 90%;
+    width: 50%;
   }
 
-  .images-pic {
-    width: 85%;
-    margin-left: 0;
-  }
-
-  .review-box {
-    width: 80%;
+  .info-box {
+    width: 50%;
   }
 }
 
-@media screen and (max-width: 740px) {
-  .section-box {
-    justify-content: flex-start;
-  }
-
-  .review-list-box {
-    width: 90%;
-  }
-
-  .review-header {
-    width: 90%;
-  }
-
-  .review-para {
-    justify-content: flex-start;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .review-list-box {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .home {
-    font-size: 20px;
-  }
-
-  .reviews {
-    font-size: 14px;
-  }
-
-  .search-image {
-    width: 100px;
-  }
-
+@media screen and (min-width: 1400px) {
   .search-contain {
-    width: 100%;
+    width: 50%;
   }
 
-  .info-title {
-    margin: 50px;
-    font-size: 28px;
-  }
-
-  .info-pic {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .movie-title {
-    font-size: 28px;
-    margin: 0 10px;
-  }
-
-  .search-title {
-    font-size: 16px;
-  }
-
-  .user-title {
-    width: 65%;
-  }
-
-  .section {
-    margin-left: 10px;
-  }
-
-  .section-head {
-    margin-left: 20px;
-  }
-
-  .poster-pic {
-    margin: 0;
-  }
-
-  .review-box {
-    width: 100%;
-  }
-
-  .the-review {
-    margin-left: 20px;
+  .info-box {
+    width: 40%;
   }
 }

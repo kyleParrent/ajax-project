@@ -1,7 +1,7 @@
 /* exported data */
 
 var data = {
-  view: 'search-form',
+  view: 'reviews',
   editing: null,
   nextId: 1,
   tempTitle: '',
