@@ -115,6 +115,7 @@ label {
 }
 
 .review-button {
+  padding: 10px 20px;
   font-size: 18px;
   background-color: darkgray;
   font-weight: bold;

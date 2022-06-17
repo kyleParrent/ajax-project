@@ -214,10 +214,10 @@ function generateReview(dataObj) {
   icon.className = 'fas fa-edit icon';
   iconBox.appendChild(icon);
   var newRow = document.createElement('div');
-  row.className = 'row';
+  newRow.className = 'row';
   revLi.appendChild(newRow);
   var col = document.createElement('div');
-  col.className = 'col-full';
+  col.className = 'col-full change';
   newRow.appendChild(col);
   var imageBox = document.createElement('div');
   imageBox.className = 'image-box';
@@ -227,7 +227,7 @@ function generateReview(dataObj) {
   img.setAttribute('src', dataObj.poster);
   imageBox.appendChild(img);
   var col2 = document.createElement('div');
-  col2.className = 'col-full';
+  col2.className = 'col-full change';
   newRow.appendChild(col2);
   var center = document.createElement('div');
   center.className = 'center';
@@ -247,12 +247,12 @@ function generateReview(dataObj) {
   }
   h12.textContent = dataObj.rating;
   center2.appendChild(h12);
-  var col5 = document.createElement('div');
-  col5.className = 'col-full center';
-  newRow.appendChild(col5);
+  var center3 = document.createElement('div');
+  center3.className = 'center';
+  col2.appendChild(center3);
   var allSecBox = document.createElement('div');
   allSecBox.className = 'all-sections';
-  col5.appendChild(allSecBox);
+  center3.appendChild(allSecBox);
   var secBox = document.createElement('div');
   secBox.className = 'section-box';
   allSecBox.appendChild(secBox);

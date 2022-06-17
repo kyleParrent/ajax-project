@@ -2,6 +2,10 @@ input {
   width: 320px;
 }
 
+.review-ul {
+  width: 100%;
+}
+
 .user-title {
   width: 200px;
 }
@@ -16,7 +20,9 @@ input {
 
 .the-review {
   padding-left: 30px;
+  padding-right: 30px;
   padding-bottom: 50px;
+  padding-top: 20px;
 }
 
 .image-box {
@@ -144,6 +150,16 @@ input {
 }
 
 @media screen and (min-width: 700px) {
+  .review-ul {
+    width: 80%;
+  }
+
+  .review-header {
+    width: 80%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .info-box {
     width: 60%;
   }
@@ -157,13 +173,35 @@ input {
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .col-full.change {
+    flex-basis: 50%;
+  }
+
+  .info-title {
+    margin-top: 75px;
+  }
+
+  .review-button-box {
+    margin-top: 0;
+  }
+
+  .review-box {
+    width: 80%;
+  }
+
+  .review-button {
+    margin-top: 50px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .search-contain {
     width: 50%;
   }
 
-  .info-box {
-    width: 50%;
+  .review-box {
+    width: 70%;
   }
 }
 
@@ -172,7 +210,7 @@ input {
     width: 50%;
   }
 
-  .info-box {
-    width: 40%;
+  .review-box {
+    width: 60%;
   }
 }
