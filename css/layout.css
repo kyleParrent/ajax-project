@@ -1,0 +1,216 @@
+input {
+  width: 320px;
+}
+
+.review-ul {
+  width: 100%;
+}
+
+.user-title {
+  width: 200px;
+}
+
+.info-data {
+  width: 70%;
+}
+
+.all-sections {
+  width: 70%;
+}
+
+.the-review {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+}
+
+.images-pic {
+  width: 80%;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.col-half {
+  flex-basis: 50%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar {
+  margin: 30px;
+  border-bottom: 1px solid rgb(255, 200, 90);
+  display: flex;
+  justify-content: space-between;
+}
+
+.home {
+  font-size: 26px;
+  display: inline;
+}
+
+.inline {
+  display: inline;
+}
+
+.reviews {
+  align-items: flex-end;
+  display: flex;
+  margin-bottom: 3px;
+}
+
+.info-pic {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  margin: 0 0 0 50px;
+}
+
+.review-button-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.user-review {
+  width: 90%;
+}
+
+.b-box {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pad-top {
+  padding-top: 20px;
+}
+
+.pad-none {
+  padding: 0;
+}
+
+.review-header {
+  display: flex;
+  width: 100%;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+
+.reviewed-item {
+  margin-bottom: 50px;
+}
+
+.icon-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.result-box {
+  padding: 0;
+}
+
+.info-title {
+  margin: 0 0 50px;
+}
+
+@media screen and (min-width: 500px) {
+  .user-title {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .review-ul {
+    width: 80%;
+  }
+
+  .review-header {
+    width: 80%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .info-box {
+    width: 60%;
+  }
+
+  .search-contain {
+    width: 70%;
+  }
+
+  .a-search {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .col-full.change {
+    flex-basis: 50%;
+  }
+
+  .info-title {
+    margin-top: 75px;
+  }
+
+  .review-button-box {
+    margin-top: 0;
+  }
+
+  .review-box {
+    width: 80%;
+  }
+
+  .review-button {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .search-contain {
+    width: 50%;
+  }
+
+  .review-box {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .search-contain {
+    width: 50%;
+  }
+
+  .review-box {
+    width: 60%;
+  }
+}
