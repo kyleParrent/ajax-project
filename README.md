@@ -1,6 +1,6 @@
 # movie-registry
 
-A dynamic HTML, CSS, and JavaScript solo project.
+A dynamic HTML, CSS, and JavaScript solo project for movie watchers who want to rate and review films.
 
 
 
@@ -9,9 +9,11 @@ A dynamic HTML, CSS, and JavaScript solo project.
 - HTML5
 - CSS3
 - JavaScript
+- IMDb-API
 
 ## Live Demo
 
+Movie Registry was my first solo project. I wanted to create an app revolving around something i enjoyed, movies, and this made the process that much more enjoyable.
 Try the application live at [https://kyleparrent.github.io/movie-registry/](https://kyleparrent.github.io/movie-registry/)
 
 ## Features
@@ -31,35 +33,7 @@ Try the application live at [https://kyleparrent.github.io/movie-registry/](http
 - User can search by category
 - User can view orignal imdb link
 
-### System Requirements
-
-- Node.js 10 or higher
-- NPM 6 or higher
-- MongoDB 4 or higher
-
 ### Getting Started
 
-1. Clone the repository.
-
-    ```shell
-    git clone https://github.com/Learning-Fuze/sgt-react
-    cd sgt-react
-    ```
-
-1. Install all dependencies with NPM.
-
-    ```shell
-    npm install
-    ```
-
-1. Import the example database to MongoDB.
-
-    ```shell
-    mongoimport --db sgt-react database/dump.json
-    ```
-
-1. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
-
-    ```shell
-    npm run dev
-    ```
+- IMDb-API was used for this project. Please refer to the API docs for more information on accessing the API.
+  Link: https://imdb-api.com/api
