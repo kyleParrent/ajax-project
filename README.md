@@ -2,8 +2,6 @@
 
 A dynamic HTML, CSS, and JavaScript solo project for movie watchers who want to rate and review films.
 
-
-
 ## Technologies Used
 
 - HTML5
@@ -31,7 +29,7 @@ Try the application live at [https://kyleparrent.github.io/movie-registry/](http
 ## Stretch Features
 
 - User can search by category
-- User can view orignal imdb link
+- User can view original IMDb link
 
 ### Getting Started
 
