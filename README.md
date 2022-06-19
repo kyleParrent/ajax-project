@@ -36,4 +36,4 @@ Try the application live at [https://kyleparrent.github.io/movie-registry/](http
 ### Getting Started
 
 - IMDb-API was used for this project. Please refer to the API docs for more information on accessing the API.
-- Link to API docs: https://imdb-api.com/api
+- Link to API docs: [https://imdb-api.com/api]
